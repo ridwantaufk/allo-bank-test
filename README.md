@@ -474,19 +474,7 @@ The repository should be submitted as a private GitHub repository according to t
 
 # Challenge Submission Question
 
-## What is your GitHub username and what service charge percentage does it produce?
-
-```text
-GitHub username: ridwantaufk
-
-ASCII/Unicode character sum: 1184
-
-1184 % 10 = 4
-
-Service charge percentage: 4%
-```
-
-The service charge percentage is calculated programmatically by the application.
+The hardest design decision was deciding whether the service charge should directly affect each participant's settlement balance. I chose to keep the settlement calculation based on the actual expense shares while exposing the service charge separately in the settlement response. This makes the core debt calculation predictable and avoids silently assigning the service charge to participants without an explicit rule. The trade-off is that `totalWithServiceCharge` does not automatically translate into settlement transactions because the system does not assume who should bear the service charge.
 
 ---
 
