@@ -1,0 +1,13 @@
+package com.ridwantaufik.allobank;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class AlloBankTestApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
